@@ -1,8 +1,8 @@
 Package.describe({
   summary: 'Define and run db migrations.',
-  version: '1.0.2',
-  name: 'percolate:migrations',
-  git: 'https://github.com/percolatestudio/meteor-migrations.git',
+  version: '1.0.3',
+  name: 'chefcookit:migrations',
+  git: 'https://github.com/chefcookit/meteor-migrations',
 });
 
 Package.on_use(function(api) {
