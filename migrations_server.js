@@ -41,9 +41,10 @@ Migrations = {
     logIfLatest: true,
     // migrations collection name
     collectionName: 'migrations',
-  },
+  }, 
   config: function(opts) {
     this.options = _.extend({}, this.options, opts);
+    Migrations._collection = new Mongo.Collection(this.options.collectionName);
   },
 };
 
@@ -86,7 +87,6 @@ var log;
 
 Meteor.startup(function() {
   var options = Migrations.options;
-
   // collection holding the control record
   Migrations._collection = new Mongo.Collection(options.collectionName);
 
